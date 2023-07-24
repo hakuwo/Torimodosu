@@ -5,9 +5,9 @@
   "description": "Twitterの左上に鳥を取り戻す拡張です",
   "action": {
     "default_icon": {
-      "16": "16.png",
-      "48": "48.png",
-      "128": "128.png"
+      "16": "/icons/16.png",
+      "48": "/icons/48.png",
+      "128": "/icons/128.png"
     }
   },
   "permissions": ["activeTab"],
