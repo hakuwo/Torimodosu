@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Torimodosu",
+  "version": "1.0",
+  "description": "Twitterの左上に鳥を取り戻す拡張です",
+  "action": {
+    "default_icon": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    }
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["*://twitter.com/*", "*://*.twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
