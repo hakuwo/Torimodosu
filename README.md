@@ -12,6 +12,8 @@ The Chrome extension to change the Twitter icon back from X to a bird design.
   - Supports DOM observation.
 - Faviconのデザインも元に戻します。
   - It also restores the design of the favicon.
+- 鳥アイコンの色を設定できます。
+  - Can set the color of the bird icon.
 - 他の拡張機能との競合を避けるため、Twitterのアイコンを書き換える以外の機能はありません。
   - To avoid conflicts with other Chrome extensions, there are no features other than rewriting the Twitter icon.
 
