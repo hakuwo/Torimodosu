@@ -1,17 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const blueForDark = document.getElementById('blueForDark');
+    const blueButton = document.getElementById('blueButton');
+    const blackButton = document.getElementById('blackButton');
+    const whiteButton = document.getElementById('whiteButton');
 
-    // Save the state of the checkbox and set the initial value
-    chrome.storage.sync.get({ blueForDark: false }, (data) => {
-        blueForDark.checked = data.blueForDark;
+    // Processing when button is clicked
+    blueButton.addEventListener('click', () => {
+        saveLastButtonClicked(1);
+    });
+    blackButton.addEventListener('click', () => {
+        saveLastButtonClicked(2);
+    });
+    whiteButton.addEventListener('click', () => {
+        saveLastButtonClicked(3);
     });
 
-    // Monitor checkbox changes
-    blueForDark.addEventListener('change', () => {
-        chrome.storage.sync.set({ blueForDark: blueForDark.checked });
-        // Send a message to `content_script` when the state of a checkbox is changed
+    // Save the last button pressed
+    function saveLastButtonClicked(buttonValue) {
+        chrome.storage.sync.set({ lastButtonClicked: buttonValue });
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-            chrome.tabs.sendMessage(tabs[0].id, { blueForDark: blueForDark.checked });
+            chrome.tabs.sendMessage(tabs[0].id, { lastButtonClicked: buttonValue });
         });
-    });
+    }
 });
