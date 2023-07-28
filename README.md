@@ -16,6 +16,8 @@ The Chrome extension to change the Twitter icon back from X to a bird design.
   - Can set the color of the bird icon.
 - 他の拡張機能との競合を避けるため、Twitterのアイコンを書き換える以外の機能はありません。
   - To avoid conflicts with other Chrome extensions, there are no features other than rewriting the Twitter icon.
+- ただしアイコンが鳥なのに"X"というサイト名だと鳥が可哀想なので、サイト名を"Twitter"に変更します。
+  - However, since it is sad for the bird to have a bird icon but the site name is "X", the site name is changed to "Twitter".
 
 # インストール / Installation
 

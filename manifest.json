@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Torimodosu",
-  "version": "1.3",
-  "description": "Twitterに鳥を取り戻す拡張です",
+  "version": "1.5",
+  "description": "Twitterに鳥を取り戻す拡張です。ついでにサイト名も「Twitter」に戻します。",
   "icons": {
     "16": "/icons/16.png",
     "48": "/icons/48.png",
@@ -11,7 +11,7 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["storage"],
   "host_permissions": ["*://twitter.com/*", "*://*.twitter.com/*"],
   "content_scripts": [
     {
