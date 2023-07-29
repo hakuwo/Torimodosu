@@ -80,10 +80,30 @@ function changeFaviconHref() {
  * Change icon color
  */
 function changeIconColor() {
+  const newColorValue = getNewIconColor();
+  // PC
   const targetElement = document.querySelector("#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > header > div > div > div > div:nth-child(1) > div.css-1dbjc4n.r-dnmrzs.r-1vvnge1 > h1 > a > div > svg > g");
   if (targetElement) {
-    const newColorValue = getNewIconColor();
     targetElement.setAttribute('style', `color: ${newColorValue};`);
+    return;
+  }
+  // Mobile(White)
+  const targetElementMobile = document.querySelector("#layers > div:nth-child(2) > div > div > div > div.css-1dbjc4n.r-1e5uvyk.r-6026j.r-dkhcqf.r-axxi2z.r-18jm5s1 > div > div.css-1dbjc4n.r-136ojw6 > div > div > div > div > div.css-1dbjc4n.r-1awozwy.r-16y2uox.r-1wbh5a2.r-1pi2tsx.r-1777fci > svg > g");
+  if (targetElementMobile) {
+    targetElementMobile.setAttribute('style', `color: ${newColorValue};`);
+    return;
+  }
+  // Mobile(Dark)
+  const targetElementMobileDark = document.querySelector("#layers > div:nth-child(2) > div > div > div > div.css-1dbjc4n.r-1e5uvyk.r-ii8lfi.r-dkhcqf.r-axxi2z.r-18jm5s1 > div > div.css-1dbjc4n.r-136ojw6 > div > div > div > div > div.css-1dbjc4n.r-1awozwy.r-16y2uox.r-1wbh5a2.r-1pi2tsx.r-1777fci > svg > g");
+  if (targetElementMobileDark) {
+    targetElementMobileDark.setAttribute('style', `color: ${newColorValue};`);
+    return;
+  }
+  // Mobile(Black)
+  const targetElementMobileBlack = document.querySelector("#layers > div:nth-child(2) > div > div > div > div.css-1dbjc4n.r-1e5uvyk.r-5zmot.r-dkhcqf.r-axxi2z.r-18jm5s1 > div > div.css-1dbjc4n.r-136ojw6 > div > div > div > div > div.css-1dbjc4n.r-1awozwy.r-16y2uox.r-1wbh5a2.r-1pi2tsx.r-1777fci > svg > g");
+  if (targetElementMobileBlack) {
+    targetElementMobileBlack.setAttribute('style', `color: ${newColorValue};`);
+    return;
   }
 }
 
