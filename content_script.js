@@ -135,15 +135,11 @@ function replaceLastXWithTwitter() {
   document.title = modifiedTitle;
 }
 
-// Replace "X" at the end of the page title with "Twitter" (for JP lang page.)
-function replaceXWithTwitter() {
-  const elements = document.getElementsByTagName('span');
-  for (const element of elements) {
-    if (element.textContent.includes('さんはXを使っています')) {
-      const modifiedText = element.textContent.replace(/X/g, 'Twitter');
-      element.textContent = modifiedText;
-    }
-  }
+// Replace user title of tweet page (for JP lang page.)
+function replaceUserTitleWithTwitter() {
+  const pageTitle = document.title;
+  const modifiedTitle = pageTitle.replace(/(.*)ユーザーの(.+)さん/, '$2さんはTwitterを使っています');
+  document.title = modifiedTitle;
 }
 
 // Performs DOM monitoring and executes processing when there is a change in the title
@@ -151,7 +147,7 @@ let lastTitle = document.title;
 const titleObserver = new MutationObserver(() => {
   if (document.title !== lastTitle) {
     replaceLastXWithTwitter();
-    replaceXWithTwitter();
+    replaceUserTitleWithTwitter();
     lastTitle = document.title;
   }
 });
