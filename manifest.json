@@ -18,5 +18,11 @@
       "js": ["content_script.js"]
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://twitter.com/*", "*://*.twitter.com/*", "*://x.com/*", "*://*.x.com/*"]
+    }
+  ],
   "options_page": "popup.html"
 }

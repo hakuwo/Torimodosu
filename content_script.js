@@ -72,7 +72,7 @@ function replaceTwitterIconsTop(targetPathData, newPathData) {
 function changeFaviconHref() {
   const linkElement = document.querySelector('link[rel="shortcut icon"]');
   if (linkElement) {
-    linkElement.setAttribute('href', '/favicon.ico');
+    linkElement.setAttribute('href', chrome.runtime.getURL('icons/icon_32.png'));
   }
 }
 
