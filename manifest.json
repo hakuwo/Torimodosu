@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Torimodosu",
-  "version": "1.7",
+  "version": "1.8",
   "description": "Twitterに鳥を取り戻す拡張です。ついでにサイト名も「Twitter」に戻します。",
   "icons": {
     "16": "/icons/16.png",
